@@ -1,12 +1,241 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Webpack Runs</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Yikes | Task Manager</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <div class="logo"><button>Yikes</button></div>
+        <div class="primary-nav">
+          <ul>
+            <li>
+              <button class="nav-button" data-state="not">
+                <span>🏠</span> Home
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" data-state="selected">
+                <span>📅</span> Today
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" data-state="not">
+                <span>⏭️</span> Tomorrow
+              </button>
+            </li>
+            <li>
+              <button class="nav-button" data-state="not">
+                <span>✅</span> Completed
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="greetings">
+        <h2>Good Morning, Xander 😃</h2>
+        <p>It's Monday, 25 November 2024</p>
+      </div>
+
+      <div class="task-creator">
+        <div class="task-input">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+
+          <input type="text" id="task-input" placeholder="Create new task" />
+
+          <button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="extras">
+          <textarea name="desc" id="desc" placeholder="Description"></textarea>
+          <div class="date-priority">
+            <div class="priority">
+              <p>Priority:</p>
+              <select name="priority" id="priority">
+                <option value="high" class="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="date">
+              <p>Deadline:</p>
+              <input type="datetime-local" name="date" id="date" />
+            </div>
+            <button class="add-task extra-btn">Add Task</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tasks">
+        <div class="task">
+          <div class="start">
+            <input type="checkbox" name="task-done" id="task-done" />
+            <div class="task-main">
+                <h4 class="task-title">Take a bath</h4>
+                <p class="task-desc">
+                    You stupid for waiting for a description for this
+                </p>
+            </div>
+        </div>
+        
+        <div class="end">
+              <div class="priority-low"></div>
+            <p class="deadline">15-05-2024</p>
+            <button>
+                <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+              />
+            </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="task">
+            <div class="start">
+              <input type="checkbox" name="task-done" id="task-done" />
+              <div class="task-main">
+                  <h4 class="task-title">Take a bath</h4>
+                  <p class="task-desc">
+                      You stupid for waiting for a description for this
+                  </p>
+              </div>
+          </div>
+          
+          <div class="end">
+                <div class="priority-high"></div>
+              <p class="deadline">15-05-2024</p>
+              <button>
+                  <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                />
+              </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="task">
+            <div class="start">
+              <input type="checkbox" name="task-done" id="task-done" />
+              <div class="task-main">
+                  <h4 class="task-title">Take a bath</h4>
+                  <p class="task-desc">
+                      You stupid for waiting for a description for this
+                  </p>
+              </div>
+          </div>
+          
+          <div class="end">
+                <div class="priority-low"></div>
+              <p class="deadline">15-05-2024</p>
+              <button>
+                  <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                />
+              </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="task">
+            <div class="start">
+              <input type="checkbox" name="task-done" id="task-done" />
+              <div class="task-main">
+                  <h4 class="task-title">Take a bath</h4>
+                  <p class="task-desc">
+                      You stupid for waiting for a description for this
+                  </p>
+              </div>
+          </div>
+          
+          <div class="end">
+                <div class="priority-medium"></div>
+              <p class="deadline">15-05-2024</p>
+              <button>
+                  <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
+                />
+              </svg>
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
 </html>
