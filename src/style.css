@@ -31,6 +31,10 @@ svg {
     width: 24px;
 }
 
+textarea {
+    margin-top: .5rem;
+}
+
 .sidebar {
   height: 100vh;
   position: fixed;
@@ -106,6 +110,10 @@ svg {
 
 .greetings p {
   color: #414040;
+}
+
+.edit-title svg{
+    width: 18px;
 }
 
 .task-input {
@@ -241,12 +249,12 @@ align-items: center;
 justify-content: space-between;
 border: 1px solid var(--gray);
 border-radius: 5px;
-padding: .5rem;
+padding: .5rem .6rem;
 cursor: pointer;
 }
 
 .start:hover {
-    opacity: 72%;
+    opacity: 60%;
 }
 
 .start, .end {
@@ -262,6 +270,13 @@ input[type="checkbox"] {
 .task-desc {
     font-size: .8rem;
     color: #414040;
+}
+
+.task-done {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 5px;
+    border: 2px solid var(--gray);
 }
 
 
@@ -299,4 +314,27 @@ input[type="checkbox"] {
 
 .priority-low::before {
     content: 'Low';
+}
+
+.no-task-error {
+    color: #ff8888;
+    font-size: .85rem;
+    font-weight: bold;
+    margin: .5rem 0;
+    display: none;
+}
+
+.completed {
+    opacity: 70%;
+}
+
+
+.completed h4,
+.completed .task-desc{
+    color: #838383;
+    text-decoration: line-through;
+}
+
+.completed .task-done {
+    background-color: #6d6d6d;
 }
