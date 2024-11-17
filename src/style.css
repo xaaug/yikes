@@ -338,3 +338,26 @@ input[type="checkbox"] {
 .completed .task-done {
     background-color: #6d6d6d;
 }
+
+.day-tab {
+    margin-top: 2rem;
+}
+
+.states {
+    margin: 2rem 0 0 2rem;
+}
+
+.states h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+
+
+.day-tab h4 {
+    font-size: 1.25rem;
+    border: 1px solid var(--gray);
+    padding: .5rem 1rem;
+    font-weight: 600;
+    border-radius: 10px;
+}
