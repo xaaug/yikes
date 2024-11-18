@@ -4,6 +4,7 @@ import getCompleted from "./js/getCompleted";
 import getToday from "./js/getToday";
 import getTomorrow from "./js/getTomorrow";
 import { addTask, setTaskValues, tasks } from "./js/createTask";
+import {name as userName} from './js/setName';
 
 import "./style.css";
 
@@ -15,6 +16,8 @@ const taskInputsEl = document.querySelector('.tasks-inputs')
 const tabContainer = document.querySelector('.tab')
 const stateBtns = document.querySelectorAll('button[data-state]')
 const homeContainer = document.querySelector('.home')
+const dialog = document.querySelector('dialog')
+const dialogInput = document.querySelector('dialog input')
 
 const formattedDate = getDate();
 
@@ -93,6 +96,22 @@ document.addEventListener("click", ({ target }) => {
     tabContainer.style.display = 'none'
     homeContainer.style.display = 'block'
     setBtnState(target)
+  }
+
+  if (target.matches('.edit-name svg')) {
+    dialog.showModal()
+  }
+
+  if (target.matches('dialog button')) {
+    if (dialogInput.value.trim() !== "") {
+      document.querySelector('.name').textContent = dialogInput.value.trim()
+      dialog.close()
+
+    } else {
+      dialogInput.focus()
+      return
+    }
+
   }
 });
 

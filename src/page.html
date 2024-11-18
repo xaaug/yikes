@@ -36,11 +36,19 @@
       </nav>
     </div>
 
+    <div class="dialog">
+      <dialog>
+        <label for="name">Enter Name:</label>
+        <input type="text" name="name" id="name" placeholder="What should we call you?">
+        <button class="extra-btn">Save Name</button>
+      </dialog>
+    </div>
+
     <div class="container">
       <div class="greetings">
         <h2>
-          Good Morning, Xander
-          <button class="edit-title">
+          Good Morning, <span class="name">Xander</span>
+          <button class="edit-name">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
