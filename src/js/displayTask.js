@@ -2,7 +2,8 @@ const tasksContainer = document.querySelector(".tasks");
 
 const displayTask = (task) => {
     console.log(task.deadline)
-  tasksContainer.innerHTML += ` <div class="task ${task.completed ? 'completed' : ''}">
+  tasksContainer.innerHTML += `
+   <div class="task ${task.completed ? 'completed' : ''}">
     <div class="start">
       <div class="task-done"></div>
       <div class="task-main">

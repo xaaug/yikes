@@ -12,7 +12,7 @@ const extrasEl = document.querySelector(".extras");
 const dayEl = document.querySelector(".day");
 const tasksContainer = document.querySelector(".tasks");
 const taskInputsEl = document.querySelector('.tasks-inputs')
-const stateContent = document.querySelector('.state-content')
+const tabContainer = document.querySelector('.tab')
 const stateBtns = document.querySelectorAll('button[data-state]')
 const homeContainer = document.querySelector('.home')
 
@@ -66,18 +66,23 @@ document.addEventListener("click", ({ target }) => {
 
   if (target.matches('.today')) {
     tasksContainer.innerHTML = ''
-    getToday(tasks)
+    tabContainer.style.display = 'block'
     homeContainer.style.display = "none" 
+    getToday(tasks)
     setBtnState(target)
   }
-
+  
   if (target.matches('.tomorrow')) {
+    tasksContainer.innerHTML = ''
+    tabContainer.style.display = 'block'
     getTomorrow(tasks)
     homeContainer.style.display = "none"
     setBtnState(target)
   }
-
+  
   if (target.matches('.completed-btn')) {
+    tasksContainer.innerHTML = ''
+    tabContainer.style.display = 'block'
     getCompleted(tasks)
     homeContainer.style.display = "none"
     setBtnState(target)
@@ -85,7 +90,7 @@ document.addEventListener("click", ({ target }) => {
   }
 
   if (target.matches('.home-btn')) {
-    stateContent.innerHTML = ''
+    tabContainer.style.display = 'none'
     homeContainer.style.display = 'block'
     setBtnState(target)
   }

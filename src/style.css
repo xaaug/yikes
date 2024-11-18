@@ -339,8 +339,9 @@ input[type="checkbox"] {
     background-color: #6d6d6d;
 }
 
-.day-tab {
+.tab {
     margin-top: 2rem;
+    display: none;
 }
 
 .states {
@@ -354,7 +355,7 @@ input[type="checkbox"] {
 }
 
 
-.day-tab h4 {
+.tab-title {
     font-size: 1.25rem;
     border: 1px solid var(--gray);
     padding: .5rem 1rem;
