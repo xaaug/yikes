@@ -32,6 +32,14 @@ const setBtnState = target => {
   }
 }
 
+const changeTab = (target, func) => {
+  tasksContainer.innerHTML = ''
+    tabContainer.style.display = 'block'
+    homeContainer.style.display = "none" 
+    func(tasks)
+    setBtnState(target)
+}
+
 
 inputEl.addEventListener("keydown", ({ key }) => {
   if (key === "Enter") {
@@ -68,27 +76,15 @@ document.addEventListener("click", ({ target }) => {
   }
 
   if (target.matches('.today')) {
-    tasksContainer.innerHTML = ''
-    tabContainer.style.display = 'block'
-    homeContainer.style.display = "none" 
-    getToday(tasks)
-    setBtnState(target)
+    changeTab(target, getToday)
   }
   
   if (target.matches('.tomorrow')) {
-    tasksContainer.innerHTML = ''
-    tabContainer.style.display = 'block'
-    getTomorrow(tasks)
-    homeContainer.style.display = "none"
-    setBtnState(target)
+    changeTab(target, getTomorrow)
   }
   
   if (target.matches('.completed-btn')) {
-    tasksContainer.innerHTML = ''
-    tabContainer.style.display = 'block'
-    getCompleted(tasks)
-    homeContainer.style.display = "none"
-    setBtnState(target)
+   changeTab(target, getCompleted)
     
   }
 
@@ -104,7 +100,8 @@ document.addEventListener("click", ({ target }) => {
 
   if (target.matches('dialog button')) {
     if (dialogInput.value.trim() !== "") {
-      document.querySelector('.name').textContent = dialogInput.value.trim()
+      document.querySelector('.name').textContent = dialogInput.value.trim().charAt(0).toUpperCase() + dialogInput.value.trim().slice(1)
+      dialogInput.value = ''
       dialog.close()
 
     } else {
