@@ -4,6 +4,7 @@ import getCompleted from "./js/getCompleted";
 import getToday from "./js/getToday";
 import getTomorrow from "./js/getTomorrow";
 import { addTask, setTaskValues, tasks } from "./js/createTask";
+import setHome from "./js/home";
 import {name as userName} from './js/setName';
 
 import "./style.css";
@@ -92,6 +93,7 @@ document.addEventListener("click", ({ target }) => {
     tabContainer.style.display = 'none'
     homeContainer.style.display = 'block'
     setBtnState(target)
+    setHome(tasks)
   }
 
   if (target.matches('.edit-name svg')) {

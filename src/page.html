@@ -88,7 +88,7 @@
                   d="M12 4.5v15m7.5-7.5h-15"
                 />
               </svg>
-
+              <label for="task-input" style="display: none"></label>
               <input
                 type="text"
                 id="task-input"
@@ -125,6 +125,7 @@
               <div class="date-priority">
                 <div class="priority">
                   <p>Priority:</p>
+                  <label for="priority" style="display: none"></label>
                   <select name="priority" id="priority">
                     <option value="high" selected>High</option>
                     <option value="medium">Medium</option>
@@ -133,6 +134,7 @@
                 </div>
                 <div class="date">
                   <p>Deadline:</p>
+                  <label for="date" style="display: none"></label>
                   <input type="date" name="date" id="date" />
                 </div>
                 <button class="add-task extra-btn">Add Task</button>
@@ -145,7 +147,7 @@
           </div>
         </div>
 
-        <div class="empty-tasks states">
+        <div class="home-empty states">
           <h2>Wow, so empty🕳️...just like your motivation</h2>
         </div>
       </div>
